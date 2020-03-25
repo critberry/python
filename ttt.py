@@ -9,9 +9,14 @@ class Board:
 
     def displayBoard(self):
         for row in self.grid:
-            print(row)
-            print('')
-
+            row_temp = ""
+            for symbol in row:
+                if symbol == " ":
+                    row_temp += "_ "
+                else:
+                    row_temp += symbol + " "
+            print(row_temp)
+            
 def checkWinCondition(board):
     # Check rows
     
